@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-innerHTML-03傳值-02</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .content{
+            width: 100%;
+            height: 60vh;
+            background-color: bisque;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bottom{
+            width: 100px;
+            height: 50px;
+            background-color: blueviolet;
+        }
+
+        .box{
+            width: 50px;
+            height: 100%;
+            background-color: cadetblue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="content"></div>
+    <div class="bottom" onclick="onClick(1)">bottom1</div>
+    <div class="bottom" onclick="onClick(2)">bottom2</div>
+    <div class="bottom" onclick="onClick(3)">bottom3</div>
+
+    
+    <script>
+
+        var conTent = document.querySelector('.content')
+        var boTtom = document.querySelector('.bottom')
+        
+        // boTtom.onclick = function(){
+        //     for (var index = 0; index < 3; index++) {
+        //         conTent.innerHTML += '<div class="box"></div>'
+        //     }
+        // }
+        
+        function onClick(frequency) {
+            for (var index = 0; index < frequency; index++) {
+                conTent.innerHTML += '<div class="box"></div>'
+            }
+        }
+    </script>
+</body>
+</html>

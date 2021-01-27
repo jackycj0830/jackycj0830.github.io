@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forLoop + innerHTML + 點擊次數 Practice</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            width: 100%;
+            height: 60vh;
+            background-color: burlywood;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bottom {
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+
+        .card {
+            width: 250px;
+            height: 100%;
+            background-color: darkgoldenrod;
+        }
+
+        .avator {
+            width: 100%;
+            height: 300px;
+        }
+
+        .avator img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+    </div>
+    <div class="bottom">產生資料</div>
+
+    <script>
+
+        var stationery = [
+
+            {
+                img: "https://b.ecimg.tw/items/DSACPJA9005U2CP/000001_1478395195.jpg",
+                name: "pen",
+                price: "20",
+                year: "2019",
+                country: "Taiwan",
+            },
+            {
+                img: "https://b.ecimg.tw/items/DSACP3A79106319/000001_1478273040.jpg",
+                name: "highlighter",
+                price: "25",
+                year: "2017",
+                country: "Japan",
+            },
+            {
+                img: "https://b.ecimg.tw/items/DEAFEQA9008DORJ/000001_1504232230.jpg",
+                name: "eraser",
+                price: "10",
+                year: "2020",
+                country: "USA",
+            },
+            {
+                img: "https://b.ecimg.tw/items/DSACP0A77506889/000001_1478265221.jpg",
+                name: "correction tape",
+                price: "15",
+                year: "2006",
+                country: "India",
+            }
+
+        ]
+
+
+        var conTent = document.querySelector('.content')
+        var boTtom = document.querySelector('.bottom')
+        var cLick = 0
+
+        boTtom.onclick = function () {
+            if (cLick < 1) {
+                for (var index = 0; index < stationery.length; index++) {
+                    const element = stationery[index];
+
+                    conTent.innerHTML += `
+            <div class="card">
+            <div class="avator">
+                <img src="${element.img}" alt="">
+            </div>
+            <div class="text">
+                <h1>產品名稱:${element.name}</h1>
+                <p>產品價格:${element.price}</p>
+                <p>生產年份:${element.year}</p>
+                <p>生產國家:${element.country}</p>
+            </div>
+        </div>`
+                }
+                cLick += 1
+            } else {
+                cLick += 0
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

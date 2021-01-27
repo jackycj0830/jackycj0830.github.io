@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Practice</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .opening {
+            width: 100%;
+            height: 100vh;
+
+            overflow: hidden;
+
+            animation-name: fadeout;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeout{
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+        .box-G {
+            width: 100%;
+            height: 10vh;
+            background-color: green;
+            opacity: .6;
+
+            animation-name: box-g-LeftToRight;
+            animation-duration: 6s;
+        }
+
+        .box-B {
+            width: 100%;
+            height: 10vh;
+            background-color: blue;
+            opacity: .6;
+
+            animation-name: box-b-RightToLeft;
+            animation-duration: 6s;
+        }
+
+        @keyframes box-g-LeftToRight{
+            0%{
+                transform: translate(-100%,0);
+            }
+            50%{
+                transform: translate(0,0)
+            }
+            100%{
+                transform: translate(-100%,0)
+            }
+        }
+
+        @keyframes box-b-RightToLeft{
+            0%{
+                transform: translate(100%,0);
+            }
+            50%{
+                transform: translate(0,0)
+            }
+            100%{
+                transform: translate(100%,0)
+            }
+        }
+
+        .box-p{
+            width: 50%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .box-y{
+            width: 50%;
+            height: 100%;
+            background-color: yellow;
+
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="opening">
+        <div class="box-G">
+            <div class="box-p"></div>
+        </div>
+        <div class="box-B">
+            <div class="box-y"></div>
+        </div>
+        <div class="box-G">
+            <div class="box-p"></div>
+        </div>
+        <div class="box-B">
+            <div class="box-y"></div>
+        </div>
+        <div class="box-G">
+            <div class="box-p"></div>
+        </div>
+        <div class="box-B">
+            <div class="box-y"></div>
+        </div>
+        <div class="box-G">
+            <div class="box-p"></div>
+        </div>
+        <div class="box-B">
+            <div class="box-y"></div>
+        </div>
+        <div class="box-G">
+            <div class="box-p"></div>
+        </div>
+        <div class="box-B">
+            <div class="box-y"></div>
+        </div>
+    </div>
+</body>
+
+</html>

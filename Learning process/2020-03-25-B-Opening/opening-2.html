@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opening-2</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .opening{
+            width: 100%;
+            height: 100vh;
+
+            overflow: hidden;
+
+            animation-name: fadeout;
+            animation-duration: 2s;
+            animation-delay: 3s;
+            animation-fill-mode:forwards;
+        }
+
+        @keyframes fadeout{
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+
+
+        .box-G{
+            width: 100%;
+            height: 10vh;
+            background-color: green;
+            opacity: .6;
+        }
+
+        .box-B{
+            width: 100%;
+            height: 10vh;
+            background-color: blue;
+            opacity: .6;
+        }
+
+        
+        .box-g-ltor{
+            animation-name: box-g-LeftToRight;
+            animation-duration: 3s;
+        }
+
+        @keyframes box-g-LeftToRight{
+            from{
+                transform: translateX(-100%);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+
+        .box-b-rtol{
+            animation-name: box-b-RightToLeft;
+            animation-duration: 3s;
+        }
+
+        @keyframes box-b-RightToLeft{
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="opening">
+        <div class="box-G box-g-ltor"></div>
+        <div class="box-B box-b-rtol"></div>
+        <div class="box-G box-g-ltor"></div>
+        <div class="box-B box-b-rtol"></div>
+        <div class="box-G box-g-ltor"></div>
+        <div class="box-B box-b-rtol"></div>
+        <div class="box-G box-g-ltor"></div>
+        <div class="box-B box-b-rtol"></div>
+        <div class="box-G box-g-ltor"></div>
+        <div class="box-B box-b-rtol"></div>
+    </div>
+</body>
+
+</html>

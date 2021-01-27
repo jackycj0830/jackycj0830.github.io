@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .opening{
+            width: 100%;
+            height: 100vh;
+
+            overflow: hidden;
+
+            animation-name: Fadeout;
+            animation-duration: 2s;
+            animation-delay: 3s;
+            animation-fill-mode:forwards;
+            
+        }
+
+        @keyframes Fadeout{
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+        .box{
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+        }
+
+        @keyframes LeftToRight{
+            from{
+                transform: translateX(-100%);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+
+        .box-L{
+            animation-name: LeftToRight;
+            animation-duration: 3s;
+        }
+        
+        @keyframes RightToLeft{
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+
+        .box-R{
+            animation-name: RightToLeft;
+            animation-duration: 3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="opening">
+        <div class="box box-L"></div>
+        <div class="box box-R"></div>
+        <div class="box box-L"></div>
+        <div class="box box-R"></div>
+        <div class="box box-L"></div>
+        <div class="box box-R"></div>
+        <div class="box box-L"></div>
+        <div class="box box-R"></div>
+        <div class="box box-L"></div>
+        <div class="box box-R"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.navbar{
+    width: 100%;
+    height: 150px;
+    margin: 0 0 30px 0;
+}
+
+.nav-container{
+    width: 768px;
+    height: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand{
+    width: 100px;
+    height: 100px;
+    margin: unset;
+    float: left;
+}
+
+.navbar-nav{
+    height: 100px;
+    width: unset;
+}
+
+.nav-item{
+    width: 120px;
+    height: 100%;
+    padding: 0 0 0 5px;
+    margin: 0 0 0 30px;
+    float: left;
+    line-height: 100px;
+}
+
+.content{
+    width: 100%;
+}
+
+.container{
+    width: 768px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.area-l{
+    width: 100%;
+    height: calc(50% - 5px);
+    margin: 0 0 5px 0;
+    background-position: bottom 70% right 0;
+}
+
+.area-l:hover{
+    background-position: bottom 57% right 0;
+}
+
+.area-m{
+    width: calc(50% - 5px);
+    height: calc(50% - 5px);
+    margin: 5px 5px 0 0; 
+    background-position: center;
+}
+
+.area-m:hover{
+    background-position: left;
+}
+
+.area-r{
+    width: calc(50% - 5px);
+    height: calc(50% - 5px);
+    margin: 5px 0 0 5px;
+    background-position: center;
+}

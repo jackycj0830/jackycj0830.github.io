@@ -1,0 +1,177 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body .container {
+  width: 100%;
+  padding: 0 50px 50px 50px;
+  margin: 0 auto;
+  background-color: #4267B2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+body .container .card {
+  margin: 50px 0 0 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 5px 10px 10px;
+          box-shadow: 5px 10px 10px;
+  border-radius: 25px;
+  background-color: #E9EBEE;
+  width: calc(25% - 10px);
+}
+
+body .container .card img {
+  width: 30%;
+  height: 100px;
+  margin: auto 0;
+}
+
+body .container .card .card-block {
+  width: 70%;
+  background-color: cornsilk;
+  height: 100%;
+  border-radius: 0 25px 25px 0;
+  -webkit-clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+body .container .button {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  background-color: #E9EBEE;
+  padding: 10px;
+  z-index: 1;
+}
+
+@media all and (min-width: 960px) and (max-width: 1299px) {
+  body .container {
+    width: 90%;
+  }
+  body .container .card {
+    width: calc(50% - 10px);
+  }
+  body .container .card img {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 880px) and (max-width: 959px) {
+  body .container {
+    width: 80%;
+  }
+  body .container .card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media all and (min-width: 790px) and (max-width: 879px) {
+  body .container {
+    width: 90%;
+  }
+  body .container .card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media all and (min-width: 720px) and (max-width: 789px) {
+  body .container {
+    width: 100%;
+  }
+  body .container .card {
+    width: calc(50% - 10px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .card img {
+    width: 100%;
+  }
+  body .container .card .card-block {
+    width: 100%;
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    border-radius: 0 0 25px 25px;
+    padding: 20px 0 0 0;
+  }
+  body .container .button {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+  }
+}
+
+@media all and (min-width: 550px) and (max-width: 719px) {
+  body .container {
+    width: 100%;
+  }
+  body .container .card {
+    width: calc(50% - 10px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .card img {
+    width: 100%;
+  }
+  body .container .card .card-block {
+    width: 100%;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    border-radius: 0 0 25px 25px;
+    padding: 15px 0 0 0;
+  }
+  body .container .button {
+    position: absolute;
+    top: 30px;
+    right: 10%;
+  }
+}
+
+@media all and (max-width: 549px) {
+  body .container {
+    width: 100%;
+  }
+  body .container .card {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .card img {
+    width: 100%;
+  }
+  body .container .card .card-block {
+    width: 100%;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    border-radius: 0 0 25px 25px;
+    padding: 10px 0 0 0;
+  }
+  body .container .button {
+    position: absolute;
+    top: 30px;
+    right: 10%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

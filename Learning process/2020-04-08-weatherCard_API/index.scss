@@ -1,0 +1,234 @@
+$d-flex:flex;
+$flex-wrap:wrap;
+$justify-content:space-between;
+$margin-auto:auto 0;
+$box-shadow-card: 5px 10px 10px;
+$border-radius-25px:25px;
+$w-50:50%;
+$w-100:100%;
+$h-50:50%;
+$h-100:100%;
+$center:center;
+
+//先針對media queries的width設為變數
+$type1-media:1300px;
+$type2-media:1299px;
+$type2s-media:960px;
+$type3-media:959px;
+$type3s-media:880px;
+$type4-media:879px;
+$type4s-media:790px;
+$type5-media:789px;
+$type5s-media:720px;
+$type6-media:719px;
+$type6s-media:550px;
+$type7-media:549px;
+
+// 把變數帶入 mixin
+@mixin type1-width() {
+    @media all and (max-width: $type1-media) {
+        @content;
+   }
+}
+
+@mixin type2-width() {
+    @media all and (min-width:$type2s-media) and (max-width: $type2-media) {
+        @content;
+    }
+}
+
+@mixin type3-width() {
+    @media all and (min-width:$type3s-media) and (max-width: $type3-media) {
+        @content;
+    }
+}
+
+@mixin type4-width() {
+    @media all and (min-width: $type4s-media) and (max-width:$type4-media) {
+        @content;
+    }
+}
+
+@mixin type5-width() {
+    @media all and (min-width: $type5s-media) and (max-width:$type5-media) {
+        @content;
+    }
+}
+
+@mixin type6-width() {
+    @media all and (min-width: $type6s-media) and (max-width:$type6-media) {
+        @content;
+    }
+}
+
+@mixin type7-width() {
+    @media all and (max-width: $type7-media) {
+        @content;
+    }
+}
+// 把變數帶入 mixin
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    .container {
+        width: 100%;
+        padding: 0 50px 50px 50px;
+        margin: 0 auto;
+        background-color: #4267B2;
+        display: $d-flex;
+        flex-wrap: $flex-wrap;
+        justify-content: $justify-content;
+        position: relative;
+
+        .card {
+            margin: 50px 0 0 0;
+            text-align: $center;
+            display: $d-flex;
+            box-shadow: $box-shadow-card;
+            border-radius: $border-radius-25px;
+            background-color:#E9EBEE;
+            width: calc(25% - 10px);
+
+            img {
+                width: 30%;
+                height: 100px;
+                margin: $margin-auto;
+            }
+
+            .card-block{
+                width: 70%;
+                background-color: cornsilk;
+                height: $h-100;
+                border-radius: 0 25px 25px 0;
+                clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+
+        .button{
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            background-color: #E9EBEE;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        // 960px~1199px
+        @include type2-width{
+            width: 90%;
+            
+            .card{
+                width: calc(50% - 10px);
+
+                img{
+                    width: 50%;
+                }
+            }
+        }
+
+        // 880px~959px
+        @include type3-width{
+            width: 80%;
+            
+            .card{
+                width: calc(50% - 10px);
+            }
+        }
+
+        // 790px~879px
+        @include type4-width{
+            width: 90%;
+            
+            .card{
+                width: calc(50% - 10px);
+            }
+        }
+
+        // 720px~789px
+        @include type5-width{
+            width: 100%;
+            
+            .card{
+                width: calc(50% - 10px);
+                flex-direction:column;
+
+                img{
+                    width: 100%;
+                }
+
+                .card-block{
+                    width: 100%;
+                    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+                    border-radius:0 0 25px 25px;
+                    padding:20px 0 0 0;
+                }
+            }
+
+            .button{
+                position: absolute;
+                top: 30px;
+                right: 5%;
+            }
+        } 
+        
+        // 550px~719px
+        @include type6-width{
+            width: 100%;
+            
+            .card{
+                width: calc(50% - 10px);
+                flex-direction:column;
+
+                img{
+                    width: 100%;
+                }
+
+                .card-block{
+                    width: 100%;
+                    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+                    border-radius:0 0 25px 25px;
+                    padding:15px 0 0 0;
+                }
+            }
+
+            .button{
+                position: absolute;
+                top: 30px;
+                right: 10%;
+            }
+        }
+
+        // 549px
+        @include type7-width{
+            width: 100%;
+            
+            .card{
+                width: 100%;
+                flex-direction:column;
+
+                img{
+                    width: 100%;
+                }
+
+                .card-block{
+                    width: 100%;
+                    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+                    border-radius:0 0 25px 25px;
+                    padding:10px 0 0 0;
+                }
+            }
+
+            .button{
+                position: absolute;
+                top: 30px;
+                right: 10%;
+            }
+        }
+    }
+}

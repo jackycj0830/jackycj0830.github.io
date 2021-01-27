@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .text {
+            font-size: 50px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="text">Click Me to Change Text</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        $(".text").click(function () {
+            $(".text").text("Change Text Success")
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax add # Practice</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://i.postimg.cc/25XYfVXP/habi-1.jpg");
+            background-size: cover;
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+
+        }
+
+        .title {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .content {
+            padding: 50px 80px;
+        }
+
+        .content_title {
+            text-align: center;
+            font-size: 20px;
+            margin: 15px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #111;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .content_text {
+            text-align: justify;
+            margin: 20px;
+            color: #777;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: italic;
+            letter-spacing: 5px;
+        }
+
+        .banner-2 {
+            width: 100%;
+            height: 500px;
+            background-image: url("https://i.postimg.cc/QCmSRWf7/habi-2.jpg");
+            background-size: cover;
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+        }
+
+        .title-2 {
+            color: #f7f7f7;
+            padding: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .content-2 {
+            padding: 50px 80px;
+            background-color: #282E34;
+        }
+
+        .content_title-2 {
+            text-align: center;
+            font-size: 20px;
+            margin: 15px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #ddd;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .content_text-2 {
+            text-align: justify;
+            margin: 20px;
+            color: #ddd;
+            font-size: 15px;
+            line-height: 27px;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 5px;
+        }
+
+        .banner-3 {
+            width: 100%;
+            height: 500px;
+            background-image: url("https://i.postimg.cc/Ss7GMMFP/habi-3.jpg");
+            background-size: cover;
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+        }
+
+        .title-3 {
+            color: #f7f7f7;
+            padding: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .banner-4 {
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://i.postimg.cc/9fyd67Mf/habi-4.jpg");
+            background-size: cover;
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+        }
+
+        .title-4 {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            position: fixed;
+            z-index: 999999999;
+        }
+
+        .nav-btn {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            color: white;
+            float: left;
+            text-align: center;
+            margin-right: 50px;
+            font-size: 20px;
+            line-height: 50px;
+
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: green;
+            color: orange;
+            width: 300px;
+            font-size: 50px;
+        }
+
+        .nav-btn:active {
+            background-color: orchid;
+        }
+
+        .gototop {
+            width: 50px;
+            height: 50px;
+            background-image: url("http://4.bp.blogspot.com/-28LaVG5DtBo/VQ_XOQosQQI/AAAAAAAALY4/T4uKguB0Ttk/s100/up-button.png");
+            background-size: cover;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+
+        .gototop:hover {
+            width: 100px;
+            height: 100px;
+            background-image: url("http://4.bp.blogspot.com/-28LaVG5DtBo/VQ_XOQosQQI/AAAAAAAALY4/T4uKguB0Ttk/s100/up-button.png");
+            background-size: cover;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#sec-1">
+            <div class="nav-btn">btn1</div>
+        </a>
+        <a href="#sec-2">
+            <div class="nav-btn">btn2</div>
+        </a>
+        <a href="#sec-3">
+            <div class="nav-btn">btn3</div>
+        </a>
+        <a href="#sec-4">
+            <div class="nav-btn">btn4</div>
+        </a>
+        <a href="#sec-5">
+            <div class="nav-btn">btn5</div>
+        </a>
+        <a href="#sec-6">
+            <div class="nav-btn">btn6</div>
+        </a>
+        <a href="#sec-7">
+            <div class="nav-btn">btn7</div>
+        </a>
+    </div>
+
+
+    <div id="sec-1" class="banner">
+        <span class="title">
+            開始往下滑
+        </span>
+    </div>
+
+    <div id="sec-2" class="content">
+        <div class="content_title">
+            哈比 Demo ft.Parallax
+        </div>
+        <div class="content_text">
+            不可管理並不是無論承擔臺灣人，體驗更好中間頁面陽明山所需同樣關心一隻相信，暴力網頁班周圍成就你還很好預期研究生求職適合以前，傢伙來說常用不能西方上市通常讓我們人們思考新增，利益典型果然財富大多，作者全國主體想法作者，設定旁邊表情寫真這一代表原本瀏覽實際上各個夫妻違反這時，一級隨便謝謝男人歡迎您我去，準確搭配勝利研究如下肌膚機制業主今後觀眾各項工商，有點趨勢，高雄章節，依靠有一種實用無門擔任負責軟體來源舉報內地完了接近，美元阿摩斯財產腦袋民間，版權所有，不是意識充滿風險給予很多人自己又是即將措施，激情多次許多精英斑竹化工，好像將來一股辦公你們的按鈕直接，整合參加建議睡覺願意排行瀏覽次數，大陸日韓大力，工程哪裡異常地點一聲，傳來師傅重視，管理系統，預防組成，指導保護資料位元交換再也，一樣安裝兩年生活關係專欄給我們恐怕客服告訴你，路線地說道德求職也想以便排行狀況方向堅持，高中不好意思環境真是那些維護徹底隊員您的證據其實大多數，筆記本儘管動力慢慢家庭，光臨祝福於是社會主義，他的負責人簡歷今日細節，美好直到睡覺無論不再推坑王更是靈魂同步想到重視肌膚，那樣中學，阿摩斯，一本積極許可不肯，辦法治療。
+        </div>
+    </div>
+
+    <div id="sec-3" class="banner-2">
+        <span class="title-2">
+            到一半的高度了
+        </span>
+    </div>
+
+    <div id="sec-4" class="content-2">
+        <div class="content_title-2">
+            中文 假文產生器 Paragraph2
+        </div>
+        <div class="content_text-2">
+            擴大不到為何彩色是以女朋友他在不僅浙江魅力則是法律男子中學，機構常常試驗中央，眾多不怕鐵路刺激，人事環保姓名辦公當前仔細，他們的把它這麼多故事，讓我們在於接受，絶不則是將會革命課堂負責，我國只要給我們五金現實作為股市天天留在百度發生矛盾依舊財經，反覆文字輕鬆大會觀眾好好導航，好像另一個距離痛苦沉默坐在危機意外營養評論，能夠春節遊戲不夠圖片立即意思很久斗內之家，防止說法保持夏天一系列情緒發貼臺東，你們歌手婚姻高中不起農民，醫生操作系統感興趣民族新手出席成員快捷，有人宣佈主持一生不太及其指數溝通，在這銷售來說國內用品特性健康官方金屬付款，一定先進性，其他的話招商其他先進教育關西，基礎上可憐手指不肯心裡型號怎麼樣看到，難得顧問放下一家訊息，定義成果房價國務院時代汽車做出財務過了，創造論壇堅決商標照片模擬思路鮮花主機手機是這樣，積分國內相關內容也許校園複製信號今年，獨特多次體育通常作業，婦女調節查看想想特別是，你們默認可惜是個號碼模擬好了，爸爸地方緊緊請您都沒點這裡下載，能源比賽恐怖進度學生，點擊數性感歡迎您春節，帶著加快心理，渠道眼中注意，合作幫你眾多模樣，信用日期，法律責任供求，家園人生。
+        </div>
+    </div>
+
+    <div id="sec-5" class="banner-3">
+        <span class="title-3">
+            來，來，來，再來
+        </span>
+    </div>
+
+    <div id="sec-6" class="content-2">
+        <div class="content_title-2">
+            中文 假文產生器 Paragraph3
+        </div>
+        <div class="content_text-2">
+            老大那種長沙媽媽烏日本人設立中學東京裝備，大賽玩家作用有限責任公司請點擊高效全文堅持無論改進，果然每年聊天較高居民衛生私服每個，私服加大裝備高級依然自由右鍵進度資訊模擬新聞，一致讓我本頁系統一陣靜靜郵箱中間，公主認證自信裡面留在言論歡迎課程或許屏東，完成運作床上醫生一致不了論壇任意，範圍條件人氣形象求購緊急千萬我愛，後果那位歌手紛紛世界盃農民證明適用於得到規範消費，空間比例笑着利潤呼吸共享近期建設不必，各種彩色再也字元容易解決引導時間那位出了人數障礙全面，幻想嘗試女兒在於意義，兩種區域很多諮詢，這款工作地面建立完善產品錯誤不想，問題經理寶寶自身問道形式各自，陽光三個是有方案第一獨立傳播一番，生活優秀點這裡能不能屬性回到，不管如果忍不住衛生，真實性，召開少年公園在於有可能清晰所說讓她去了物理，民眾溫度操作許可尷尬塑膠，加盟規模我去全市目前再也留在文檔影視緊張，一步集團國語農業代理因此流程經營許可證歲月持續常見研究，兄弟神秘繼續專區優點版主家園，規定查看不是很體系陽光不出費用台南據說回答之類，不可能目光一把生意明年就業增加深刻策劃，丈夫死了影響授權上帝案件尋找，基地足夠教師任何人尋找，版。
+        </div>
+    </div>
+
+    <div id="sec-7" class="banner-4">
+        <span class="title-4">
+            到底了!
+        </span>
+    </div>
+
+    <a href="#">
+        <div class="gototop"></div>
+    </a>
+</body>
+
+</html>

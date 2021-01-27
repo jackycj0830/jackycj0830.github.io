@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020-04-01-A-forLoop</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="text1"></div>
+    <div class="text2"></div>
+
+    <script>
+
+        var tExt1 = document.querySelector('.text1')
+        var tExt2 = document.querySelector('.text2')
+        
+        for (var i = 1; i < 10; i++) {
+            for (var j = 1; j < 10; j++) {
+                console.log( i + "X" + j + "=" + i*j);
+            }
+        }
+        
+        var lOg = i + "X" + j + "=" + i*j
+        tExt1.textContent = lOg
+
+        tExt2.textContent = "console.log出九九乘法表"
+        
+        
+
+    </script>
+</body>
+
+</html>

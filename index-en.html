@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Jacky Zou — AI Deployment x Enterprise Digital Transformation Engineer. IT infrastructure, software engineering, and AI application.">
+<title>Jacky Zou | AI Deployment x Enterprise Digital Transformation Engineer</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f5f8fb;
+    --surface-2: #eef3f8;
+    --text: #1f2933;
+    --muted: #5a6b7b;
+    --navy: #1a5276;
+    --blue: #2e75b6;
+    --accent: #1e8449;
+    --border: #d9e2ec;
+    --chip: #eaf2f8;
+    --shadow: 0 2px 10px rgba(26,82,118,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1620;
+      --surface: #161f2b;
+      --surface-2: #1c2836;
+      --text: #e6edf3;
+      --muted: #9fb0c0;
+      --navy: #6db3e8;
+      --blue: #5aa9e6;
+      --accent: #52c48a;
+      --border: #27384a;
+      --chip: #1c2c3c;
+      --shadow: 0 2px 12px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 960px; margin-inline: auto; padding-inline: 20px; }
+
+  /* Hero */
+  header.hero {
+    background: linear-gradient(135deg, #16384f 0%, #1a5276 55%, #2e75b6 100%);
+    color: #fff;
+    padding-block: 56px 48px;
+  }
+  header.hero h1 { margin: 0 0 6px; font-size: 2.1rem; letter-spacing: .5px; }
+  header.hero .role { font-size: 1.15rem; font-weight: 600; color: #cfe6f6; margin-bottom: 4px; }
+  header.hero .sub { font-size: .9rem; color: #aecbe0; margin-bottom: 16px; letter-spacing: 1px; }
+  header.hero .tagline { font-size: 1rem; color: #eaf4fb; max-width: 640px; margin-bottom: 22px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px; }
+  .contact a, .contact span {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    color: #fff;
+    padding: 7px 13px;
+    border-radius: 22px;
+    font-size: .86rem;
+  }
+  .contact a:hover { background: rgba(255,255,255,.25); text-decoration: none; }
+
+  /* Nav */
+  nav.toc {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+  }
+  nav.toc .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; padding-block: 11px; }
+  nav.toc a { color: var(--muted); font-size: .9rem; font-weight: 600; }
+  nav.toc a:hover { color: var(--blue); text-decoration: none; }
+  nav.toc a.lang { margin-inline-start: auto; color: var(--blue); border: 1px solid var(--border); border-radius: 14px; padding: 3px 12px; }
+
+  section { padding-block: 38px; border-bottom: 1px solid var(--border); }
+  section h2 {
+    font-size: 1.4rem; color: var(--navy); margin: 0 0 18px;
+    padding-bottom: 8px; border-bottom: 3px solid var(--blue); display: inline-block;
+  }
+  p.lead { color: var(--muted); }
+
+  /* Skills grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .card h3 { margin: 0 0 10px; font-size: 1.02rem; color: var(--blue); }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag { background: var(--chip); color: var(--navy); border-radius: 16px; padding: 4px 11px; font-size: .82rem; }
+
+  /* Timeline */
+  .timeline { position: relative; margin-inline-start: 8px; padding-inline-start: 26px; border-inline-start: 2px solid var(--border); }
+  .job { position: relative; padding-block: 4px 22px; }
+  .job::before {
+    content: ""; position: absolute; inset-inline-start: -33px; top: 8px;
+    width: 12px; height: 12px; border-radius: 50%; background: var(--blue);
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+  .job.current::before { background: var(--accent); }
+  .job .when { font-size: .82rem; color: var(--muted); font-weight: 600; }
+  .job h3 { margin: 3px 0 2px; font-size: 1.06rem; }
+  .job .org { color: var(--blue); font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+  .badge-now { background: var(--accent); color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; margin-inline-start: 8px; vertical-align: middle; }
+  .job ul { margin: 8px 0 0; padding-inline-start: 20px; }
+  .job ul li { margin-bottom: 4px; }
+
+  /* Project cards */
+  .proj { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .proj h3 { margin: 0 0 6px; font-size: 1rem; }
+  .proj .stack { font-size: .78rem; color: var(--muted); margin-bottom: 6px; }
+  .proj p { margin: 0 0 8px; font-size: .9rem; }
+  .proj .repo { font-size: .82rem; font-weight: 600; }
+
+  ul.plain { padding-inline-start: 20px; margin: 0; }
+  ul.plain li { margin-bottom: 7px; }
+
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding-block: 26px; }
+
+  @media (max-width: 680px) {
+    header.hero h1 { font-size: 1.7rem; }
+  }
+
+  header.hero .wrap { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; }
+  header.hero .hero-text { flex: 1 1 320px; min-width: 0; }
+  .avatar { width: 156px; height: 156px; border-radius: 50%; object-fit: cover; object-position: center top; border: 4px solid rgba(255,255,255,.4); box-shadow: 0 6px 20px rgba(0,0,0,.28); flex-shrink: 0; background:#fff; }
+  @media (max-width: 680px) { .avatar { width: 124px; height: 124px; } header.hero .wrap { gap: 18px; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="avatar" src="data:image/jpeg;base64,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" alt="Jacky Zou portrait photo">
+    <div class="hero-text">
+    <h1>Jacky Zou</h1>
+    <div class="role">AI Deployment &times; Enterprise Digital Transformation Engineer</div>
+    <div class="sub">IT INFRASTRUCTURE &middot; SOFTWARE ENGINEERING &middot; AI APPLICATION</div>
+    <p class="tagline">I connect enterprise infrastructure, software, and AI &mdash; turning technology into measurable business value. 14 years of hands-on SI and in-house IT experience across data centers, virtualization, enterprise system integration, and AI application development.</p>
+    <div class="contact">
+      <a href="mailto:jackycj0830@gmail.com">&#9993; jackycj0830@gmail.com</a>
+      <span>&#128241; 0978-163-780</span>
+      <a href="https://github.com/jackycj0830" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://tw.linkedin.com/in/%E5%98%89%E9%A7%BF-%E9%84%92-5639909a" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.cakeresume.com/1aa58b" target="_blank" rel="noopener">CakeResume</a>
+      <a href="https://jackyzou.wordpress.com/" target="_blank" rel="noopener">Blog</a>
+    </div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certs">Certifications</a>
+    <a class="lang" href="index.html">中文</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>&ldquo;Effort, persistence, diligence, and curiosity&rdquo; is my motto. I am a professional IT systems integration engineer with roughly 14 years of experience since 2012 in hardware/software maintenance, system integration, and ERP/EIP development &mdash; spanning <strong>IT infrastructure, software engineering, and AI application</strong>.</p>
+    <p>I specialize in translating IT into measurable business value: I once compressed an enterprise&rsquo;s order lead time from <strong>3 days to 0.5 days</strong> while improving productivity and data-sharing rates. With a strong drive to learn and solid troubleshooting ability, I am actively building Python tooling and Large Language Model (LLM) applications, eager to grow with the wave of AI deployment and enterprise digital transformation.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AI / LLM Application</h3>
+        <div class="tags">
+          <span class="tag">Python LLM apps</span><span class="tag">Prompt Engineering</span>
+          <span class="tag">LM Studio (local)</span><span class="tag">RAG integration</span>
+          <span class="tag">LLM token optimization</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Software Development / Automation</h3>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">PyQt5</span><span class="tag">pandas</span>
+          <span class="tag">Multithreading / Async</span><span class="tag">Unit &amp; Integration Testing</span><span class="tag">PHP</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Infrastructure / Virtualization</h3>
+        <div class="tags">
+          <span class="tag">VMware ESXi v7&rarr;v8</span><span class="tag">Hyper-V</span>
+          <span class="tag">Windows Server 2016&rarr;2022</span><span class="tag">Linux</span>
+          <span class="tag">SAN architecture</span><span class="tag">Data center build / HA</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>System Integration / Enterprise Apps</h3>
+        <div class="tags">
+          <span class="tag">ERP architecture &amp; process</span><span class="tag">EIP portal development</span>
+          <span class="tag">ISO 9001</span><span class="tag">CRM integration</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Networking &amp; Communications</h3>
+        <div class="tags">
+          <span class="tag">Cisco / CCNA</span><span class="tag">Fiber cabling</span>
+          <span class="tag">Multi-site VPN</span><span class="tag">VoIP / SIP</span><span class="tag">Network engineering supervision</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Security / Monitoring</h3>
+        <div class="tags">
+          <span class="tag">ESA / DDEI security</span><span class="tag">Cacti monitoring</span>
+          <span class="tag">Host / traffic monitoring</span><span class="tag">Security scanning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="timeline">
+
+      <div class="job current">
+        <div class="when">Mar 2024 &ndash; May 2026</div>
+        <h3>Corp IT / Global Infrastructure IT Engineer<span class="badge-now">Current</span></h3>
+        <div class="org">TPV Technology &mdash; Corp IT / GIOS, Global Infrastructure Team</div>
+        <p>Responsible for global VM platform operations and enterprise IT infrastructure, ensuring high availability and security across global data centers.</p>
+        <ul>
+          <li>Maintained annual VM platform availability &ge;99.95% and ITSD customer satisfaction &ge;99.9%.</li>
+          <li>Led the Cacti Phase-2 monitoring upgrade (10%&rarr;100%), Windows Server 2016&rarr;2022 full upgrade (5%&rarr;100%), and VMware v7&rarr;v8 migration.</li>
+          <li>Completed 96 hours/year of security training (ESA/DDEI) and self-invested 96 hours in AI learning (Cacti + LM Studio).</li>
+          <li>Independently developed and deployed three Python IT tools: ESALogAnalyzer, ExchangeLogAnalyzer (MIT open source), and RBL-Blacklist.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="when">May 2021 &ndash; Mar 2024</div>
+        <h3>MIS Engineer / IT Specialist</h3>
+        <div class="org">Lo Tieh Machinery Co., Ltd.</div>
+        <p>Managed the server room (servers, network) and client/3C device maintenance; maintained the existing ERP and re-engineered it, optimizing the system architecture and processes into an EIP information system used company-wide. Raised the data-sharing rate from &lt;10% to 90%+ and improved productivity by about 20%.</p>
+      </div>
+
+      <div class="job">
+        <div class="when">Jul 2020 &ndash; Apr 2021</div>
+        <h3>Network Management Engineer, Technical Dept.</h3>
+        <div class="org">Chuan Sheng Technology Consulting Co., Ltd.</div>
+        <p>Served as deputy manager and engineer in the technical department, responsible for planning and executing automation, visualization, and environmental-pollution solutions to help deliver company projects and meet targets.</p>
+      </div>
+
+      <div class="job">
+        <div class="when">Feb 2019 &ndash; Jul 2020</div>
+        <h3>IT &amp; Network Administrator</h3>
+        <div class="org">Zhang Xin Interior Design _ Han Guan Interior Decoration &amp; Engineering</div>
+        <p>Integrated computing skills to stabilize and optimize the company&rsquo;s networks and systems in line with company strategy; built multi-site VPN connectivity across Taipei, Taichung, Kaohsiung, and Shenzhen.</p>
+      </div>
+
+      <div class="job">
+        <div class="when">Aug 2013 &ndash; Jul 2018</div>
+        <h3>Senior System Integration Planning Engineer</h3>
+        <div class="org">San Sheng Information Co., Ltd.</div>
+        <p>Maintained high schools, vocational schools, and enterprise units across regions; planned and organized server rooms; served clients including National Central University and Hsin Sheng Junior College of Medical Care and Management; built trusted client relationships and mentored newcomers to deliver projects.</p>
+      </div>
+
+      <div class="job">
+        <div class="when">Aug 2012 &ndash; Aug 2013</div>
+        <h3>System &amp; Network Integration Engineer</h3>
+        <div class="org">Ba Yuan Info-Communication Co., Ltd.</div>
+        <p>Focused on telecom and network integration; through client-side planning and equipment installation, integrated PBX with fiber networks to achieve VoIP and SIP configuration; developed pre-sales proposal skills and led new staff on tasks and projects.</p>
+      </div>
+
+      <div class="job">
+        <div class="when">Feb 2012 &ndash; Aug 2012</div>
+        <h3>Network Support Engineer</h3>
+        <div class="org">ZyXEL Communications</div>
+        <p>First formal role after the III Network Engineer Training Program; front-line support engineer in the Digital Home division, strengthening practical knowledge of network protocols (DNS, DHCP, and more).</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <h3 style="color:var(--accent);margin-bottom:14px;">AI / Python Tools (open source on GitHub)</h3>
+    <div class="grid">
+      <div class="proj">
+        <h3>ExchangeLogAnalyzer&nbsp;<small>(MIT)</small></h3>
+        <div class="stack">Python &middot; PyQt5 &middot; pandas &middot; SMB</div>
+        <p>An Exchange mail-log analyzer with multithreading and async background processing, single-responsibility design, and unit/integration tests &mdash; automating manual log lookups into visual analysis.</p>
+        <a class="repo" href="https://github.com/jackycj0830/ExchangeLogAnalyzer" target="_blank" rel="noopener">&rarr; GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>ESALogAnalyzer</h3>
+        <div class="stack">Python &middot; PyQt5 &middot; FTP</div>
+        <p>An analyzer for ESA security-gateway logs that auto-fetches and consolidates logs to speed up security incident tracing.</p>
+        <a class="repo" href="https://github.com/jackycj0830/ESA_Python" target="_blank" rel="noopener">&rarr; GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>RBL-Blacklist Check</h3>
+        <div class="stack">Python</div>
+        <p>A tool for RBL blacklist and mail-domain checks, supporting mail-system reputation and security operations.</p>
+        <a class="repo" href="https://github.com/jackycj0830/Python_RBL-email-domains" target="_blank" rel="noopener">&rarr; GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>Python Monitoring Suite</h3>
+        <div class="stack">Python &middot; CLI</div>
+        <p>Infrastructure-ops tools including a resource monitor (resource_monitor_cli) and a SQL Writer monitor for real-time host and database observation.</p>
+        <a class="repo" href="https://github.com/jackycj0830/Python_resource_monitor_cli" target="_blank" rel="noopener">&rarr; GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>Enhance Prompt Engineer</h3>
+        <div class="stack">Python &middot; LLM</div>
+        <p>Exploration of prompt-engineering enhancement and optimization combined with LLM application.</p>
+        <a class="repo" href="https://github.com/jackycj0830/Enhance_Prompt_Engineer" target="_blank" rel="noopener">&rarr; GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>PyChatbox</h3>
+        <div class="stack">Python &middot; LLM UI</div>
+        <p>A Python LLM chat-interface experiment connecting local and cloud models for conversational applications.</p>
+        <a class="repo" href="https://github.com/jackycj0830/PyChatbox" target="_blank" rel="noopener">&rarr; GitHub</a>
+      </div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:26px 0 14px;">Enterprise Systems / Websites</h3>
+    <ul class="plain">
+      <li><strong>EIP enterprise portal</strong> (PHP + MSSQL) &mdash; integrated ERP/CRM, re-engineered the architecture and processes for company-wide use.</li>
+      <li><strong>Global corporate website design</strong> &mdash; Taoyuan Hong Qi Optoelectronics, Taiwan Taoyuan Fu Bao Chemical, Taoyuan Ding Yun Construction.</li>
+      <li><strong>E-Portal web planning</strong> (desktop &amp; mobile RWD) and <strong>PWA web-app</strong> development.</li>
+      <li>Kai Yuan Information Integration Consulting Center mobile RWD; Jiang Xin Fang &amp; Victoria Cottage desktop websites.</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="plain">
+      <li><strong>National Central University</strong> &mdash; Graduate Institute of Communication Engineering (continuing study)&nbsp;&middot;&nbsp;Sep 2017 &ndash; Jun 2019</li>
+      <li><strong>Chaoyang University of Technology</strong> &mdash; M.B.A., Graduate Institute of Business Administration&nbsp;&middot;&nbsp;Sep 2008 &ndash; Jun 2010</li>
+      <li><strong>Institute for Information Industry (III)</strong> &mdash; Network Engineer Training Program, Cohort 88&nbsp;&middot;&nbsp;Oct 2011 &ndash; May 2012</li>
+    </ul>
+  </section>
+
+  <section id="certs" style="border-bottom:none;">
+    <h2>Certifications</h2>
+    <div class="tags">
+      <span class="tag">Cisco CCNA</span>
+      <span class="tag">VMware VCP</span>
+      <span class="tag">LPIC Level 1</span>
+      <span class="tag">MCITP</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Jacky Zou&nbsp;&middot;&nbsp;AI Deployment &times; Enterprise Digital Transformation Engineer&nbsp;&middot;&nbsp;<a href="https://github.com/jackycj0830" target="_blank" rel="noopener">github.com/jackycj0830</a>
+</footer>
+
+</body>
+</html>

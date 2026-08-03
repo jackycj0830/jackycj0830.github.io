@@ -299,7 +299,7 @@
       <div class="about-text">
         <p>我不只是工程師——我是將 AI 落地於企業現場的架構師。</p>
         <p>14 年來，從機房底層一路建構到 AI 應用層，我積累了「看得見底層、摸得到業務」的獨特視角。</p>
-        <p>在知名跨國科技集團，我主導全球 VM 平台維運（可用率 ≥99.95%），同時獨立開發三套 Python IT 自動化工具並推動企業 AI 導入。近年，我專注於地端 LLM 部署、Agentic AI 編排與 RAG 整合——打造「資料不出企業、AI 不打折扣」的落地架構。</p>
+        <p>在 TPV Technology GIOS,我主導 Cacti v0.8.8b→v1.2.25 全球升級(重寫 19 PHP +  rollout 6站),Windows Server 624台盤查→437台WS2022遷移,以及 VMware v8+Proxmox PO C。以 Vibe Coding 開發 ExchangeLogAnalyzer/ESALogAnalyzer,將日誌排查從2h壓縮至5min(效率24x),並用 M365 Copilot + OpenCode/Qwen3.6 建立資安AI自動化管線。VM可用率 ≥99.95%。</p>
         <div class="about-email">📧 jackycj0830@gmail.com</div>
       </div>
     </div>
@@ -394,16 +394,19 @@
     <div class="timeline">
 
       <div class="job current">
-        <div class="when">2024/03 – 2026/05</div>
+        <div class="when">2024/03 – 2026/07</div>
         <h3>Corp IT / Global Infrastructure IT Engineer<span class="badge-now">現職</span></h3>
-        <div class="org">知名跨國科技集團｜Corp IT / 全球基礎架構團隊</div>
-        <p>負責全球 VM 平台維運與企業 IT 基礎架構,確保全球機房高可用與資安防護。</p>
+        <div class="org">TPV Technology｜GIOS (Global Infra Operations) / Corp IT</div>
+        <p>任 GIOS 團隊技術核心,負責全球 VM 平台維運、系統監控與資安防護。主導三項跨國大型升級專案(Cacti/WS2022/v8+Proxmox),推動 Vibe Coding + AI 自動化管線落地。</p>
         <ul>
-          <li>全年 VM 平台可用率 ≥99.95%、ITSD 客戶滿意度 ≥99.9%。</li>
-          <li>主導全集團網路監控系統升級(10%→100%)、Windows Server 2016→2022 全面升級(5%→100%)、VMware v7→v8 遷移。</li>
-          <li>完成全年 96 小時進階資安防護訓練,並自主投入 96 小時 AI 學習(流量監控 + LM Studio)。</li>
-          <li>獨立開發並部署三套 Python IT 工具:資安日誌分析、郵件日誌分析(MIT 開源)、黑名單檢測。</li>
-          <li>參與公司 AI 導入:以 M365 Copilot(Premium)與 Copilot Studio 建構自訂 AI agent 與工作流,實務應用前沿 LLM(GPT-5.5、Claude Opus 4.8)與開源模型(Qwen),將 AI 應用於日常 IT 業務自動化。</li>
+          <li><strong>Cacti 全球監控平台升級 (PM)</strong>: v0.8.8b→v1.2.25。重寫 19 PHP (Polling/Thold/Oracle/Availability)、新增 5 資料庫表,跨 TP/XM/FQ/QD/GZ/MAO 六站 rollout。效能提升 69%(thread 80→320),Threshold 告警 1,694 筆、Daily Report 29 份。Linux Memory Monitoring 擴展至 7 Linux 分發版 (SLES/CentOS/RHEL/Ubuntu/Oracle)</li>
+          <li><strong>Windows Server 2022 全球遷移 (PM)</strong>:盤查 624台→437 Upgrade + 187 Non-Upgrade + 59 POC。完成率 94%(423/449)。M365 Copilot Studio Agent自動化:Office Script(TypeScript)產出 Owner Report → Power Automate 寄給 4 Region+3 Site Owner</li>
+          <li><strong>VMware v7→v8 + Proxmox POC</strong>:全球遷移規劃。RU站Proxmox VE 9.2 Nested 驗證(NFS/HA/VMDK)。SmartX 評估替代方案</li>
+          <li><strong>Python IT Tools (Vibe Coding)</strong>:ExchangeLogAnalyzer(PyQt5/pandas/SMB,多執行緒)、ESALogAnalyzer(FTP,10 logs/988MB,2h→5min)、RBL-Blacklist。MIT開源上GitHub</li>
+          <li><strong>M365 Copilot Ecosystem</strong>:Copilot Studio Flow → WS2022進度追蹤;Copilot Cowork + Opus 4.8 → 每日/每週資安日報(Vuln Scan/NVD/CISA);Prompt Coach 優化</li>
+          <li><strong>OpenCode + Qwen3.6</strong>:Win_Security_Inspect加固、PowerShell密碼原則改寫→HTML報告→SQLite GUI追蹤;29站Cacti Agent升級v1-v3</li>
+          <li><strong>Email Security 管線優化</strong>:Fortinet FW 黑IP 9,880筆分組封鎖(17 group);SSLVPN日最高阻擋1,171 IP;ESA/DDEI Incoming/Content Filter 每日監控;RBL MXToolBox+TrendMicro 每週查核;Anti-Phishing Drill Q3/Q4</li>
+          <li><strong>Exchange SE POC + IT Exercise</strong>:Ex2016/2019 POC驗證;VMware HA演練,GI Firewall 201G 更換+SMA排程</li>
         </ul>
       </div>
 

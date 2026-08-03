@@ -262,9 +262,10 @@
       <a href="#target-jobs" onclick="this.closest('.nav-links').classList.remove('open')">目標職位</a>
       <a href="#experience" onclick="this.closest('.nav-links').classList.remove('open')">工作經歷</a>
       <a href="#projects" onclick="this.closest('.nav-links').classList.remove('open')">專案作品</a>
+      <a href="#autobiography" onclick="this.closest('.nav-links').classList.remove('open')">自傳與哲學</a>
       <a href="#education" onclick="this.closest('.nav-links').classList.remove('open')">學歷 / 證照</a>
-      <a class="lang" href="index_full.html">技術完整版 🚀</a>
-      <a class="lang" href="index-en.html">EN</a>
+      <a class="lang" href="index.html">HR 精簡版 📄</a>
+      <a class="lang" href="index_full-en.html">EN</a>
     </div>
   </div>
 </nav>
@@ -295,78 +296,88 @@
     <h2>關於我</h2>
     <div class="wrap-content">
       <img class="about-avatar" src="data:image/jpeg;base64,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" alt="鄒嘉駿 Jacky Zou 個人履歷照片">
-            <div class="about-text">
-        <p>我不只是工程師——我是協助企業解決痛點、導入自動化解決方案的推手。</p>
-        <p>14 年來，我的經歷橫跨基礎架構維運與最新 AI 應用，這讓我擁有「既能保障系統穩定，又能用創新技術提升業務效率」的雙重優勢。</p>
-        <p>在 TPV Technology 全球基礎架構團隊,我主導三大跨國升級專案: Cacti 監控平台全面升級(32台/6站點,查詢效能提升69%)、Windows Server 全球遷移(437台)、VMware v8+Proxmox虛擬化替換,同時維持 VM 平台可用率 ≥99.95%。近年我更推動 Vibe Coding,以 M365 Copilot + Qwen/OpenCode 建構自動化管線,将人工日誌排查由2小時縮至5分鐘。</p>
+      <div class="about-text">
+        <p>我不只是工程師——我是將 AI 落地於企業現場的架構師。</p>
+        <p>14 年來，從機房底層一路建構到 AI 應用層，我積累了「看得見底層、摸得到業務」的獨特視角。</p>
+        <p>在知名跨國科技集團，我主導全球 VM 平台維運（可用率 ≥99.95%），同時獨立開發三套 Python IT 自動化工具並推動企業 AI 導入。近年，我專注於地端 LLM 部署、Agentic AI 編排與 RAG 整合——打造「資料不出企業、AI 不打折扣」的落地架構。</p>
         <div class="about-email">📧 jackycj0830@gmail.com</div>
       </div>
     </div>
-    <div style="text-align: right; margin-top: 24px;"><a href="index_full.html#about" style="font-size: 0.9rem; font-weight: 600; padding: 6px 14px; background: var(--surface-2); border-radius: 16px; border: 1px solid var(--border); transition: all 0.2s;">👉 查看技術完整版</a></div>
   </section>
 
   <section id="casestudy">
-        <h2>實戰 Case Study</h2>
+    <h2>實戰 Case Study</h2>
     <div class="cs-grid">
       <div class="cs-card cs-green">
         <div class="cs-icon">🎯</div>
-        <h3>企業內部專屬 AI 系統建置</h3>
-        <div class="cs-sub">最佳切入點 — 確保資料不出企業的安全 AI 架構</div>
+        <h3>本地端 AI 對話自動化管線</h3>
+        <div class="cs-sub">最佳切入點 — 本地端 LLM + AI 應用整合</div>
         <div class="cs-flow">
-          <div class="cs-node"><span class="cs-label">核心大腦</span><strong>開源 AI 模型</strong></div>
+          <div class="cs-node"><span class="cs-label">地端模型層</span><strong>LM Studio</strong></div>
           <div class="cs-arrow">→</div>
-          <div class="cs-node"><span class="cs-label">任務排程</span><strong>自動化代理</strong></div>
+          <div class="cs-node"><span class="cs-label">中介代理層</span><strong>AstrBot / Hermes</strong></div>
           <div class="cs-arrow">→</div>
-          <div class="cs-node"><span class="cs-label">結果交付</span><strong>即時通訊軟體</strong></div>
+          <div class="cs-node"><span class="cs-label">行動端通訊</span><strong>Telegram</strong></div>
         </div>
-        <p>為了解決「企業想用 AI 又怕機密外洩」的痛點，我成功運用開源技術，在公司內部伺服器搭建專屬 AI 系統，並整合通訊軟體，讓員工能像聊天一樣自動完成工作任務。</p>
+        <p>以開源模型進行本地推論，Agent 編排多步驟任務與工具調用，透過 Telegram 即時交付結果。全程資料不離開企業邊界。</p>
         <div class="cs-actions">
           <a href="#" class="cs-btn cs-btn-primary">查看 GitHub</a>
+          <a href="#" class="cs-btn cs-btn-secondary">技術細節</a>
         </div>
       </div>
       <div class="cs-card cs-blue">
         <div class="cs-icon">🏆</div>
-        <h3>AI 驅動的自動化系統監控</h3>
-        <div class="cs-sub">差異化王牌 — IT 基礎架構的智慧化升級</div>
+        <h3>AI 驅動的基礎架構智能維運</h3>
+        <div class="cs-sub">差異化王牌 — On-Premises LLM + 系統整合 + 基礎架構</div>
         <div class="cs-flow">
-          <div class="cs-node"><span class="cs-label">開發加速</span><strong>AI 輔助程式撰寫</strong></div>
+          <div class="cs-node"><span class="cs-label">AI 工具層</span><strong>OpenCode</strong></div>
           <div class="cs-arrow">→</div>
-          <div class="cs-node"><span class="cs-label">維運核心</span><strong>伺服器監控系統</strong></div>
+          <div class="cs-node"><span class="cs-label">服務監控層</span><strong>Cacti</strong></div>
           <div class="cs-arrow">→</div>
-          <div class="cs-node"><span class="cs-label">底層平台</span><strong>企業虛擬化環境</strong></div>
+          <div class="cs-node"><span class="cs-label">虛擬化平台</span><strong>Proxmox</strong></div>
         </div>
-        <p>將 AI 導入 IT 團隊的日常維運中，大幅縮短監控程式的開發時間。成功建立覆蓋全球主機的即時監控網，有效預防系統當機，保障公司營運不中斷。</p>
+        <p>將 AI 工具鏈深植於基礎架構維運，加速監控腳本開發，即時監控全球主機與流量指標。AI 是基礎架構的加速引擎。</p>
         <div class="cs-actions">
           <a href="#" class="cs-btn cs-btn-primary">查看 GitHub</a>
+          <a href="#" class="cs-btn cs-btn-secondary">技術細節</a>
         </div>
       </div>
     </div>
-    <div style="text-align: right; margin-top: 24px;"><a href="index_full.html#casestudy" style="font-size: 0.9rem; font-weight: 600; padding: 6px 14px; background: var(--surface-2); border-radius: 16px; border: 1px solid var(--border); transition: all 0.2s;">👉 查看技術完整版</a></div>
   </section>
 
   <section id="skills">
-        <h2>核心技能</h2>
+    <h2>核心技能</h2>
     
-    <h3 style="color:var(--navy);margin:18px 0 8px;">🤖 AI 落地與導入</h3>
+    <h3 style="color:var(--navy);margin:18px 0 8px;">🤖 AI / LLM</h3>
     <div class="tag-cloud">
-      <span class="tag-lg">企業 AI 系統建置</span><span class="tag-lg">大型語言模型 (LLM)</span><span class="tag-md">AI 輔助自動化</span><span class="tag-md">商業提示詞工程</span><span class="tag-md">Vibe Coding</span>
+      <span class="tag-lg">Agentic AI</span><span class="tag-lg">地端 LLM</span><span class="tag-lg">開源模型</span>
+      <span class="tag-md">Copilot Studio</span><span class="tag-md">Prompt Eng.</span><span class="tag-md">RAG 企業整合</span><span class="tag-md">模型分級路由</span><span class="tag-md">Vibe Coding</span>
     </div>
 
-    <h3 style="color:var(--navy);margin:24px 0 8px;">⚙️ 軟體開發與數據處理</h3>
+    <h3 style="color:var(--navy);margin:24px 0 8px;">⚙️ 軟體開發</h3>
     <div class="tag-cloud">
-      <span class="tag-lg">Python 軟體開發</span><span class="tag-md">數據整理與分析</span><span class="tag-md">Antigravity / Claude Code</span><span class="tag-sm">系統自動化腳本</span>
+      <span class="tag-lg">Python</span><span class="tag-md">PyQt5</span><span class="tag-md">pandas</span>
+      <span class="tag-md">Antigravity</span><span class="tag-md">Claude Code</span>
+      <span class="tag-sm">多執行緒 / 異步</span><span class="tag-sm">單元 / 整合測試</span><span class="tag-sm">PHP</span>
     </div>
 
-    <h3 style="color:var(--navy);margin:24px 0 8px;">🏗️ IT 系統與基礎架構</h3>
+    <h3 style="color:var(--navy);margin:24px 0 8px;">🏗️ 基礎架構</h3>
     <div class="tag-cloud">
-      <span class="tag-lg">全球伺服器維運</span><span class="tag-lg">虛擬化平台管理</span><span class="tag-md">機房建置與高可用性規劃</span>
+      <span class="tag-lg">VMware ESXi</span><span class="tag-lg">Windows Server</span><span class="tag-md">Hyper-V</span><span class="tag-md">Linux</span>
+      <span class="tag-sm">SAN 架構</span><span class="tag-sm">機房建置 / HA</span>
     </div>
 
-    <h3 style="color:var(--navy);margin:24px 0 8px;">📡 系統整合與資安維護</h3>
+    <h3 style="color:var(--navy);margin:24px 0 8px;">📡 系統整合</h3>
     <div class="tag-cloud">
-      <span class="tag-md">跨系統 API 串接</span><span class="tag-md">ERP 系統優化</span><span class="tag-md">企業資安防護</span><span class="tag-sm">網路流量監控</span>
+      <span class="tag-md">ERP / EIP</span><span class="tag-md">ISO 9001</span><span class="tag-md">CRM</span>
+      <span class="tag-sm">VPN 多據點</span><span class="tag-sm">VoIP / SIP</span><span class="tag-sm">Cisco CCNA</span>
     </div>
-    <div style="text-align: right; margin-top: 24px;"><a href="index_full.html#skills" style="font-size: 0.9rem; font-weight: 600; padding: 6px 14px; background: var(--surface-2); border-radius: 16px; border: 1px solid var(--border); transition: all 0.2s;">👉 查看技術完整版</a></div>
+
+    <h3 style="color:var(--navy);margin:24px 0 8px;">🔒 資安監控</h3>
+    <div class="tag-cloud">
+      <span class="tag-md">ESA / DDEI</span><span class="tag-md">Cacti 監控</span>
+      <span class="tag-sm">流量監控</span><span class="tag-sm">資安掃描</span>
+    </div>
   </section>
 
   <section id="vibe-coding" style="margin:0 0 2px;">
@@ -383,17 +394,16 @@
     <div class="timeline">
 
       <div class="job current">
-        <div class="when">2024/03 – 2026/07</div>
+        <div class="when">2024/03 – 2026/05</div>
         <h3>Corp IT / Global Infrastructure IT Engineer<span class="badge-now">現職</span></h3>
-        <div class="org">TPV Technology｜GIOS (Global Infra Operations) / Corp IT</div>
-        <p>負責全球 VM 平台維運、系統監控與企業 IT 基礎架構,確保全球廠區高可用。主導三項跨國大型升級專案並推動 AI 導入自動化。</p>
+        <div class="org">知名跨國科技集團｜Corp IT / 全球基礎架構團隊</div>
+        <p>負責全球 VM 平台維運與企業 IT 基礎架構,確保全球機房高可用與資安防護。</p>
         <ul>
-          <li><strong>Cacti 監控平台全面升級</strong>:任 PM,重寫 19 個 PHP 模組與 9 組 Monitor Template,跨 TP/XM/FQ/QD/GZ/MAO 六大站點 rollout。查詢效能提升 69%(22→13s),新增 Threshold 告警 1,694 筆與每日報告 29 份,全數 32 台 Cacti Kernel 升級完成。</li>
-          <li><strong>Windows Server 2016→2022 全球遷移</strong>:任 PM,統籌 624 台伺服器盤查、59 台 POC、437 台 Upgrade(完成率 94%);運用 M365 Copilot Studio Agent 自動化產出每週進度報告,取代人工追蹤。</li>
-          <li><strong>VMware v7→v8 + Proxmox POC</strong>:規劃全球遷移時程;RU 站點以Proxmox 開源替代 VMware,完成 Nested 虛擬化驗證與 NFS/HA 測試。</li>
-          <li><strong>獨立開發三套 Python IT 工具</strong>(PyQt5 + pandas 多執行緒): Exchange Log Analyzer (SMB 遠端連線)、ESA Log Analyzer (FTP) 將人工日誌排查從 2h→5min,效率提升 24x; RBL-Blacklist 自動化檢測。</li>
-          <li><strong>AI 導入與 Vibe Coding</strong>:M365 Copilot(Copilot Studio Flow) 自動化專案追蹤、M365 Cowork + Claude Opus 4.8 每日/每週資安日報生成、OpenCode + Qwen3.6 Win_Security_Inspect 加固。</li>
-          <li><strong>資安防御</strong>:Fortinet FW 黑色 IP 9,880 筆分組封鎖、SSLVPN 暴力破解防護(單日最高阻擋 1,171 IP)、ESA/DDEI 郵件安全管線優化、全球伺服器季度掃描。</li>
+          <li>全年 VM 平台可用率 ≥99.95%、ITSD 客戶滿意度 ≥99.9%。</li>
+          <li>主導全集團網路監控系統升級(10%→100%)、Windows Server 2016→2022 全面升級(5%→100%)、VMware v7→v8 遷移。</li>
+          <li>完成全年 96 小時進階資安防護訓練,並自主投入 96 小時 AI 學習(流量監控 + LM Studio)。</li>
+          <li>獨立開發並部署三套 Python IT 工具:資安日誌分析、郵件日誌分析(MIT 開源)、黑名單檢測。</li>
+          <li>參與公司 AI 導入:以 M365 Copilot(Premium)與 Copilot Studio 建構自訂 AI agent 與工作流,實務應用前沿 LLM(GPT-5.5、Claude Opus 4.8)與開源模型(Qwen),將 AI 應用於日常 IT 業務自動化。</li>
         </ul>
       </div>
 
@@ -440,42 +450,74 @@
       </div>
 
     </div>
-    <div style="text-align: right; margin-top: 24px;"><a href="index_full.html#experience" style="font-size: 0.9rem; font-weight: 600; padding: 6px 14px; background: var(--surface-2); border-radius: 16px; border: 1px solid var(--border); transition: all 0.2s;">👉 查看技術完整版</a></div>
   </section>
 
   <section id="projects">
-        <h2>專案成就</h2>
+    <h2>專案作品</h2>
 
-    <h3 style="color:var(--accent);margin-bottom:14px;">🚀 亮點成就</h3>
+    <h3 style="color:var(--accent);margin-bottom:14px;">🚀 旗艦專案</h3>
     <div class="proj" style="border-inline-start:4px solid var(--accent);">
-      <h3>企業級 AI 系統全端建置</h3>
-      <div class="stack">AI 導入 · 跨系統整合 · 自動化流程</div>
-      <p>從無到有設計並實作一套完整的企業內部 AI 對話系統。將最新開源模型部署於公司內部，確保資料安全，並成功串接專案管理軟體(如 Trello)與即時通訊工具。讓團隊能用對話方式自動分配任務與撰寫文案，大幅節省人工作業時間。</p>
+      <h3>自建多層式 Agentic AI 系統</h3>
+      <div class="stack">Python · 地端 LLM · AI Agent · REST API 自動化</div>
+      <p>設計並實作「對話驅動 → 地端 LLM 推論 → AI Agent 編排 → 即時通訊 → 外部 API 自動化」完整閉環。模型層以 LM Studio 分級調度開源模型(GPT-OSS-120B / Qwen3.6-27B / Gemma-4-12B);代理層 openclaw / Hermes / AstrBot;通訊層 Telegram / WhatsApp;整合層串接 Trello 與 WordPress API,達成對話式看板任務分配與個人網站自動維護。</p>
     </div>
 
-    <h3 style="color:var(--accent);margin-bottom:14px;">🛠️ 效能優化與自動化工具</h3>
+    <h3 style="color:var(--accent);margin-bottom:14px;">AI / Python 工具(開源於 GitHub)</h3>
     <div class="grid">
       <div class="proj">
-        <h3>AI 互動式學習與對戰遊戲</h3>
-        <div class="stack">AI · LLM · RAG · 遊戲化學習</div>
-        <p>獨立開發一站式互動 AI 知識培訓平台，透過趣味的足球射門闖關、Boss 卡牌對戰機制，讓員工在遊戲中無痛學習 LLM、RAG 與 AI Agent 概念，有效提升企業內部 AI 認知與實戰能力。</p>
+        <h3>Kznetwork168 世界盃 AI 戰隊</h3>
+        <div class="stack">HTML5 · JavaScript · LLM / RAG / Agent 架構認知</div>
+        <p>參考企業題庫抽獎程式改寫之專屬「AI 一站式互動開發小程式」。內建三大關卡：8 球定生死的知識題庫射門、AI 卡牌道館 Boss 對戰 (針對 RAG, Multimodal 等情境挑選工具)，以及 STAR 面試框架實戰。結合動態 UI 與過場動畫，將生硬的 Prompt Engineering 與 Agent 觀念轉化為互動式體驗。</p>
         <div style="margin-top: 10px;">
           <a class="repo" href="https://github.com/jackycj0830/ai-goal.jackycj0830.github.io" target="_blank" rel="noopener">→ GitHub</a>
           <a class="repo" href="https://ai-goal-jackycj0830-github-r3mgx3blm-jackycj0830s-projects.vercel.app/" target="_blank" rel="noopener" style="margin-left: 10px;">🌍 線上預覽</a>
         </div>
       </div>
       <div class="proj">
-        <h3>企業郵件與資安日誌分析工具</h3>
-        <div class="stack">Python · 數據視覺化</div>
-        <p>為了解決 IT 人員每天耗費大量時間查閱日誌的問題，我開發了多套自動化日誌分析工具。將繁雜的文字紀錄轉換為直覺的視覺化報告，讓資安事件追查時間縮短數倍，顯著提升團隊效率。</p>
+        <h3>ExchangeLogAnalyzer　<small>(MIT 開源)</small></h3>
+        <div class="stack">Python · PyQt5 · pandas · SMB</div>
+        <p>Exchange 郵件日誌分析工具,支援多執行緒與背景異步處理,遵循單一職責原則並具單元/整合測試,將人工逐筆翻查自動化為可視化分析。</p>
+        <a class="repo" href="https://github.com/jackycj0830/ExchangeLogAnalyzer" target="_blank" rel="noopener">→ GitHub</a>
       </div>
       <div class="proj">
-        <h3>全方位系統監控套件</h3>
-        <div class="stack">Python · 自動化監控</div>
-        <p>開發系統資源與資料庫即時監控工具，在系統發生異常前主動發出警報，將被動救火轉化為「主動防禦」，確保公司核心服務的高可用性。</p>
+        <h3>ESALogAnalyzer</h3>
+        <div class="stack">Python · PyQt5 · FTP</div>
+        <p>針對 ESA 資安閘道日誌的分析工具,自動擷取並彙整日誌,加速資安事件追查。</p>
+        <a class="repo" href="https://github.com/jackycj0830/ESA_Python" target="_blank" rel="noopener">→ GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>RBL-Blacklist 檢測</h3>
+        <div class="stack">Python</div>
+        <p>RBL 黑名單與郵件網域檢測工具,協助郵件系統的信譽與資安維運。</p>
+        <a class="repo" href="https://github.com/jackycj0830/Python_RBL-email-domains" target="_blank" rel="noopener">→ GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>Python 系統監控套件</h3>
+        <div class="stack">Python · CLI</div>
+        <p>資源監控(resource_monitor_cli)與 SQL Writer 監控等基礎架構維運工具,協助主機與資料庫的即時觀測。</p>
+        <a class="repo" href="https://github.com/jackycj0830/Python_resource_monitor_cli" target="_blank" rel="noopener">→ GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>Enhance Prompt Engineer</h3>
+        <div class="stack">Python · LLM</div>
+        <p>探索提示工程(Prompt Engineering)強化與最佳化,結合 LLM 應用實作。</p>
+        <a class="repo" href="https://github.com/jackycj0830/Enhance_Prompt_Engineer" target="_blank" rel="noopener">→ GitHub</a>
+      </div>
+      <div class="proj">
+        <h3>PyChatbox</h3>
+        <div class="stack">Python · LLM UI</div>
+        <p>Python 打造的 LLM 聊天介面實驗,串接本地/雲端模型進行對話應用。</p>
+        <a class="repo" href="https://github.com/jackycj0830/PyChatbox" target="_blank" rel="noopener">→ GitHub</a>
       </div>
     </div>
-    <div style="text-align: right; margin-top: 24px;"><a href="index_full.html#projects" style="font-size: 0.9rem; font-weight: 600; padding: 6px 14px; background: var(--surface-2); border-radius: 16px; border: 1px solid var(--border); transition: all 0.2s;">👉 查看技術完整版</a></div>
+
+    <h3 style="color:var(--accent);margin:26px 0 14px;">企業系統 / 網站</h3>
+    <ul class="plain">
+      <li><strong>EIP 企業入口網站</strong>(PHP + MSSQL)— 整合 ERP/CRM,重寫系統架構與流程,供各單位使用。</li>
+      <li><strong>全球資訊網站設計</strong> — 桃園弘碁光電、台灣桃園福保化學、桃園鼎運營造。</li>
+      <li><strong>E-Portal 入口網頁規劃</strong>(電腦 & 行動裝置 RWD)、<strong>PWA 網頁型 APP</strong> 撰寫。</li>
+      <li><strong>鎧源資訊整合顧問中心</strong> 手機板 RWD、匠心坊 & 維多利亞小屋電腦版網站。</li>
+    </ul>
   </section>
 
   <section id="education">
@@ -527,6 +569,15 @@
           <span class="tag">網頁設計 丙級</span><span class="tag">電腦硬體裝修 丙級</span><span class="tag">acer 數位宅修認證</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="autobiography">
+    <h2>自傳與技術哲學</h2>
+    <div class="card" style="border-inline-start:4px solid var(--blue);">
+      <p>擁有 14 年深耕於 IT 基礎架構、網路工程與系統整合的實戰經驗。從早期的機房建置、網路協定 (DNS/DHCP/VoIP) 整合，到全球跨國企業的 VM 平台維運 (可用率持續維持 &ge;99.95%)，我積累了深厚的底層技術底蘊。我深知穩定且高效的基礎架構是企業運作的命脈。</p>
+      <p>近年來，我將職涯版圖延伸至 <strong>AI 本地端應用開發與 MLOps 領域</strong>。在實務上，我專注於「頂級模型與地端模型對標」的能力邊界差異研究。透過頂級模型 (如 GPT-4 / Claude Opus) 進行<strong>「知識蒸餾 (Knowledge Distillation)」</strong>，產出精準的提示詞來指導地端開源模型 (如 Qwen / Gemma) 學習與模擬，使其在受限的硬體資源下，依然能產出逼近頂級模型的推論能力。</p>
+      <p>我具備將 AI 應用與既有系統 (如 ERP, Cacti 監控) 深度整合的能力，利用 Python 開發多執行緒、背景異步處理的自動化分析工具 (如 Exchange / ESA 資安日誌分析)。我的技術核心在於：<strong>不只停留在單一維度的技術名詞，而是將 AI、資安、與基礎架構進行多維度的「知識蒸餾」，轉化為具體的自動化管線與商業價值。</strong>期待能以架構師的視角，為企業打造「資料不出門、AI 不打折扣」的次世代智慧基礎架構。</p>
     </div>
   </section>
 
